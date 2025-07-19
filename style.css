@@ -1,0 +1,213 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f2f5; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    color: #1c1e21; /* Dark text */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1877f2; /* Facebook blue */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 25px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #65676b; /* Gray text */
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #1877f2;
+}
+
+.navbar ul li a i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Feed Container */
+.feed-container {
+    max-width: 700px; /* Standard feed width */
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Post Styling */
+.post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.post-header .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+    border: 1px solid #ddd;
+}
+
+.post-header .user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-header .username {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #1c1e21;
+}
+
+.post-header .timestamp {
+    font-size: 0.85rem;
+    color: #65676b;
+}
+
+.post-content p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.post-image {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: block; /* Ensures it doesn't leave space below */
+}
+
+/* Post Actions (Like, Comment, Share buttons) */
+.post-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #f0f2f5;
+    border-bottom: 1px solid #f0f2f5;
+    margin-top: 15px;
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    color: #65676b;
+    font-size: 0.95rem;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.post-actions button i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.post-actions button:hover {
+    background-color: #f0f2f5;
+    color: #1c1e21;
+}
+
+.post-actions .like-btn.liked {
+    color: #e74c3c; /* Red for liked */
+}
+
+.post-actions .like-btn.liked i {
+    font-weight: 900; /* Solid heart */
+}
+
+
+/* Comments Section */
+.post-comments {
+    margin-top: 15px;
+}
+
+.comment {
+    background-color: #f0f2f5;
+    border-radius: 18px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.comment-author {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 15px;
+    }
+
+    .navbar ul {
+        margin-top: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 0 10px;
+    }
+
+    .feed-container {
+        margin: 15px auto;
+        padding: 0 10px;
+    }
+
+    .post-actions button {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+
+    .post-header .avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .post-header .username {
+        font-size: 1rem;
+    }
+}
